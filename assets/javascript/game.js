@@ -7,7 +7,7 @@
     function rounds() {
         if (round === 1) {
             console.log("inside round # 1");
-            readyToRumble("gandolf");
+            readyToRumble("gandalf");
         }
         else if (round === 2) {
             console.log("inside round # 2");
@@ -40,6 +40,7 @@
             console.log("these are the underscores: " + underscores);
             document.getElementById("underscoresID").innerHTML = underscores;
 
+            var newUnderscores = [''];
             // ------ ON KEY UP - CAPTURE LETTER & COMPARE
             for (var i = 0; i < 10; i++) {
                 document.onkeyup = function () {
@@ -47,16 +48,28 @@
                     var letterPressed = event.key;
                     console.log("letter pressed: " + letterPressed)
 
+
                     // ------ GUESS
                     for (var i = 0; i < wordToGuess.length; i++) {
                         console.log("----> inside for loop - word: " + wordToGuess);
                         if (letterPressed.toString() === wordToGuess.charAt(i)) {
                             console.log("well done my brotha, you made it!")
                             // ------ SET NEW UNDERSCORES 
-                            var newUnderscores[i] = "_ ";
-                            document.getElementById("underscoresID").innerHTML = newUnderscores;
+                            if (newUnderscores[i] === wordToGuess.charAt(i)) {
+                                console.log("already guessed");
+                            }
+                            else {
+                                newUnderscores.push(letterPressed.toString());
+                                console.log("new underscore: " + newUnderscores);
+                            }
+                        }
+                        else {
+                            newUnderscores.push('_ ');
+                            console.log("new underscore: " + newUnderscores);
                         }
                     }
+                    console.log(newUnderscores);
+                    // document.getElementById("underscoresID").innerHTML = newUnderscores;
                 }
 
             }
@@ -64,24 +77,6 @@
 
 
     }
-
-// rounds();
-
-
-
-// var questionDiv = document.getElementById("question");
-
-// var questions = [
-//                 { q: "u like pizza?", a: "t" },
-//                 { q: "u like beach?", a: "t" },
-//                 { q: "u like coding?", a: "t" },
-//                 { q: "u like noodles?", a: "f" }
-//             ]
-
-
-// questionDiv.innerText = questions[whichQuestion].q;
-
-// questions[whichQuestion].a;
 
 
 
