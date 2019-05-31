@@ -1,0 +1,49 @@
+
+/* --- HTML Elements */
+body {
+    background: grey;
+    color: white;
+    margin: 20%;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* h1 h2 h3 h4 {} */
+
+p {
+    color: white;
+    margin: 0;
+}
+
+
+/* --- DIVS */
+nav {
+    padding: 2%;
+    background: yellow;
+}
+
+header {
+    padding: 2%;
+    background: red;
+}
+
+div {
+    padding: 2%;
+    background: blue;
+}
+
+section {
+    padding: 2%;
+    background: green;
+}
+
+article {
+    padding: 2%;
+    background: orange;
+}
+
+footer {
+    padding: 2%;
+    background: rgb(19, 20, 90);
+}
