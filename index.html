@@ -1,46 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <!-- bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- css -->
     <link rel="stylesheet" href="assets/css/style.css">
+
     <title>Hangman BABY!</title>
 </head>
 
 
 <body>
-    <header><h1>HANGMAN, BABY!</h1></header>
+    <header>
+        <h1>HANGMAN, BABY!</h1>
+    </header>
 
+    <!-- INSTRUCTIONS -->
     <div>
-        <h3>Ready to play? Press any key to get started!</h3>
-        <h2 id="guessPrompt"></h2>
+        <h3 id="pressKeyToStartID">Ready to play? Press any key to get started!</h3>
+        <h2 id="guessPromptID"></h2>
     </div>
 
 
+    <!-- UNDERSCORES -->
     <section>
         <h2 id="underscoresID"> _ _ _ </h2>
     </section>
 
 
-    <article id="gameOver">
-        <h2 id="attemptsLeft">ATTEMPTS YOU HAVE LEFT: </h2>
-        <h3 id="wrongLettersGuessed">WRONGLY GUESSED LETTERS: </h3>
-        <h4 id="numWrongGuesses">AMOUNT OF LETTERS GUESSED WRONG: </h4>
-        <h3 id="wonRounds">Won rounds: </h3>
-        <h4 id="roundNumber">round #: </h4>
+    <!-- KEY EVENT INFO -->
+    <div class="keyEventsInfo">
+        <h4 id="recentEventID"></h4>
+    </div>
+
+
+    <!-- GAME STATS -->
+    <article id="gameOverID">
+        <h2 id="attemptsLeftID">ATTEMPTS YOU HAVE LEFT: </h2>
+        <h3 id="wrongLettersGuessedID">WRONGLY GUESSED LETTERS: </h3>
+        <h4 id="numWrongGuessesID">AMOUNT OF LETTERS GUESSED WRONG: </h4>
+        <h3 id="wonRoundsID">Won rounds: </h3>
+        <h3 id="roundNumberID">round #: </h3>
     </article>
 
 
+    <!-- NOTES -->
     <footer>
         <p>note: the rightly guessed letters don’t lower your ATTEMPTS count.</p>
         <p>note: a rightly guessed letter will fill all equal letters on the word.</p>
-        <p>note: you can play twice. there is 2 words you can guess total.</p>
+        <p>note: you can play 4 times. there is 4 words you can guess total.</p>
     </footer>
+
+    <!-- js -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
 </body>
+
 </html>
-
-
-<!-- need to add link to my portfolio ? -->
